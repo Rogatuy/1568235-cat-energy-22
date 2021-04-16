@@ -14,7 +14,7 @@
         <button class="main-nav__toggle" type="button"><span class="vissually-hidden">Открыть меню</span></button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
-            <li class="main-nav__item main-nav__item--active">
+            <li class="main-nav__item">
               <a href="index.html">
                 Главная
               </a>
@@ -24,7 +24,7 @@
                 Каталог продукции
               </a>
             </li>
-            <li class="main-nav__item">
+            <li class="main-nav__item main-nav__item--active">
               <a href="form.html">
                 Подбор программы
               </a>
@@ -34,10 +34,10 @@
       </nav>
     </header>
     <main class="page-main">
-      <h1 class="form-header">Подбор программы</h1>
-      <p class="form-paragraph">Заполните анкету, и мы подберем <br> программу питания для вашего кота</p>
-        <form class="form-programm" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="form-programm__data data">
+      <h1 class="page-main__form-header">Подбор программы</h1>
+      <p class="page-main__form-paragraph">Заполните анкету, и мы подберем <br> программу питания для вашего кота</p>
+        <form class="form-program" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="form-program__data data">
             <ul class="data__list">
               <li class="data__item">
                 <label class="data__label">Имя:*</label>
@@ -53,23 +53,23 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form-programm__programms programms">
-            <ul class="programms__list">
-              <li class="programms__item">
-                <input class="programms__input" type="radio" name="programm-group" value="slimming" id="filter-slimming" checked>
-                <label for="filter-slimming" class="programms__label">Похудение</label>
+          <fieldset class="form-program__program-type program-type">
+            <ul class="program-type__list">
+              <li class="program-type__item">
+                <input class="program-type__input" type="radio" name="program-group" value="slimming" id="filter-slimming" checked>
+                <label for="filter-slimming" class="program-type__label">Похудение</label>
               </li>
-              <li class="programms__item">
-                <input class="programms__input" type="radio" name="programm-group" value="weight" id="filter-weight" checked>
-                <label for="filter-weight" class="programms__label">Набор массы</label>
+              <li class="program-type__item">
+                <input class="program-type__input" type="radio" name="program-group" value="weight" id="filter-weight" checked>
+                <label for="filter-weight" class="program-type__label">Набор массы</label>
               </li>
-              <li class="programms__item">
-                <input class="programms__input" type="radio" name="programm-group" value="advice" id="filter-advice" checked>
-                <label for="filter-advice" class="programms__label">Не знаю (нужен ваш совет)</label>
+              <li class="program-type__item">
+                <input class="program-type__input" type="radio" name="program-group" value="advice" id="filter-advice" checked>
+                <label for="filter-advice" class="program-type__label">Не знаю (нужен ваш совет)</label>
               </li>
           </fieldset>
-          <fieldset class="form-programm__connect connect">
-            <legend class="connect__ledeng">Контактные данные (владельца кота)</legend>
+          <fieldset class="form-program__connect connect">
+            <legend class="connect__legeng">Контактные данные (владельца кота)</legend>
             <ul class="connect__list">
               <li class="connect__item">
                 <label class="connect__label">Email:*</label>
@@ -81,11 +81,11 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form-programm__comment comment">
+          <fieldset class="form-program__comment comment">
             <legend class="comment__ledeng">Комментарии</legend>
-            <input class="comment__text" type="text" placeholder="Расскажите обо всех повАдках кота">
+            <textarea class="comment__text" type="text" placeholder="Расскажите обо всех повАдках кота"></textarea>
           </fieldset>
-          <fieldset class="form-programm__additionally additionally">
+          <fieldset class="form-program__additionally additionally">
             <legend class="additionally__ledeng">Дополнительно</legend>
             <ul class="additionally__list">
               <li class="additionally__item">
@@ -105,15 +105,15 @@
                 <label for="filter-vitamins" class="additionally__label">Витамины</label>
               </li>
             </ul>
-            <input class="form-programm__send" type="submit" value="Отправить заявку">
-            <p class="form-programm__note">* — Обязательные поля</p>
+            <input class="form-program__send" type="submit" value="Отправить заявку">
+            <p class="form-program__note">* — Обязательные поля</p>
           </fieldset>
         </form>
-      <section class="map form">
+      <section class="map">
         <div class="map__wrapper">
           <h2 class="vissually-hidden">Карта и адрес</h2>
           <h3 class="map__title">приглашаем к сотрудничеству дилеров!</h3>
-          <p class="map__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+          <p class="map__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
           <div class="map__google-map">
             <irfame></irfame>
           </div>
