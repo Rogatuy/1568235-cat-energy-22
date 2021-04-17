@@ -1,0 +1,56 @@
+.programs {
+  margin: 0 20px;
+}
+
+.programs__list {
+  list-style: none;
+  padding: 0;
+}
+
+.programs__item {
+  width: 280px;
+  height: 266px;
+  background-color: @basic-grey;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.programs__title {
+  font-family: "OswaldMedium", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 37px;
+  text-align: center;
+  padding-top: 10px;
+  margin: 0;
+}
+
+.programs__description {
+  font-family: "Arial", sans-serif;
+  text-transform: none;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: @dark-grey;
+}
+
+.programs__catalog {
+  height: 57px;
+  position: absolute;
+  bottom: 0;
+  padding-top: 15px;
+  padding-right: 10px;
+  font-family: "OswaldMedium", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: normal;
+}
+
+.programs__catalog::after {
+  background-image: url("../../img/programs__catalog-arrow.svg"); //почему-то не подгружается стрелочка
+  background-color: @black;
+  background-repeat: no-repeat;
+}
+
