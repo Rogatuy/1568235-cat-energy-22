@@ -1,15 +1,56 @@
-.comment__ledeng {
+@media (min-width: @tablet-width) {
+  .comment {
+    margin-top: 35px;
+    margin-bottom: 41px;
+  }
+}
+
+.comment__legeng {
   font-family: "OswaldRegular", "Arial", sans-serif;
   font-weight: normal;
   font-size: 24px;
   line-height: 26px;
   text-transform: none;
-  padding-bottom: 29px;
+  padding: 0;
+  padding-bottom: 36px;
+  position: relative;
+}
+
+@media (min-width: @tablet-width) {
+  .comment__legeng {
+    font-size: 36px;
+    line-height: 36px;
+    margin: 0;
+    padding-bottom: 75px;
+  }
+}
+
+.comment__legeng::after {
+  content: url("../../img/comment_after.svg");
+  position: absolute;
+  left: 142px;
+  top: -9px;
+}
+
+@media (min-width: @tablet-width) {
+  .comment__legeng::after {
+    content: url("../../img/comment_legend_after_tablet.svg");
+    position: absolute;
+    left: 217px;
+    top: -9px;
+  }
+
+  .comment__legeng::before {
+    content: url("../../img/comment_legend_before_tablet.svg");
+    position: absolute;
+    left: -72px;
+    top: -9px;
+  }
 }
 
 .comment__text {
   height: 150px;
-  padding: 12px;
+  padding: 8px 14px;
   margin: 0;
   border: 1px solid @light-grey-4;
   box-sizing: border-box;
@@ -20,4 +61,15 @@
   text-transform: uppercase;
   width: 280px;
   color: @dark-grey;
+  margin-bottom: 25px;
+}
+
+@media (min-width: @tablet-width) {
+  .comment__text {
+    height: 174px;
+    padding: 10px 19px;
+    font-size: 20px;
+    line-height: 30px;
+    width: 631px;
+  }
 }

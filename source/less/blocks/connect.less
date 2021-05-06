@@ -4,7 +4,40 @@
   font-size: 24px;
   line-height: 26px;
   text-transform: none;
-  padding-bottom: 29px;
+  padding: 0;
+  padding-bottom: 35px;
+  position: relative;
+}
+
+@media (min-width: @tablet-width) {
+  .connect__legeng {
+    font-size: 36px;
+    line-height: 36px;
+    padding-bottom: 76px;
+  }
+}
+
+.connect__legeng::after {
+  content: url("../../img/connect_after.svg");
+  position: absolute;
+  right: -23px;
+  top: -5px;
+}
+
+@media (min-width: @tablet-width) {
+  .connect__legeng::after {
+    content: url("../../img/connect_after_tablet.svg");
+    position: absolute;
+    right: -185px;
+    top: -11px;
+  }
+
+  .connect__legeng::before {
+    content: url("../../img/connect_before_tablet.svg");
+    position: absolute;
+    left: -72px;
+    top: -11px;
+  }
 }
 
 .connect__list {
@@ -12,6 +45,7 @@
   margin: 0;
   padding: 0;
   padding-bottom: 10px;
+  width: 280px;
 }
 
 
@@ -22,6 +56,20 @@
   font-weight: normal;
   font-size: 16px;
   line-height: 18px;
+  padding-right: 10px;
+  padding-top: 13px;
+}
+
+.connect__item {
+  display: flex;
+}
+
+@media (min-width: @tablet-width) {
+  .connect__label {
+    font-size: 20px;
+    line-height: 30px;
+    padding-right: 15px;
+  }
 }
 
 .connect__text {
@@ -36,6 +84,17 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-  min-width: 204px;
+  min-width: 150px;
   color: @dark-grey;
+  flex-grow: 1;
+}
+
+@media (min-width: @tablet-width) {
+  .connect__text {
+    font-size: 20px;
+    line-height: 30px;
+    height: 52px;
+    margin-bottom: 20px;
+    padding: 20px;
+  }
 }

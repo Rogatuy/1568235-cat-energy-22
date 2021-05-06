@@ -1,8 +1,29 @@
 .example {
   height: 705px;
   background-color: @basic-grey-2;
-  padding: 20px;
+  padding: 20px 0;
   box-sizing: border-box;
+}
+
+@media (min-width: @tablet-width) {
+  .example {
+    background-color: @white;
+    padding: 0;
+    height: 1040px;
+    background-image: url("../../img/bcg_rectangle.svg");
+    background-repeat: no-repeat;
+    background-position-y: 578px;
+  }
+}
+
+.example__wrapper {
+  padding: 0 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .example__wrapper {
+    padding: 0 30px;
+  }
 }
 
 .example__title {
@@ -15,6 +36,15 @@
   padding-top: 7px;
 }
 
+@media (min-width: @tablet-width) {
+  .example__title {
+    font-size: 60px;
+    line-height: 60px;
+    padding-top: 0;
+    padding-bottom: 31px;
+  }
+}
+
 .example__text {
   font-family: "Arial", sans-serif;
   font-weight: normal;
@@ -25,12 +55,50 @@
   margin: 0;
 }
 
+@media (min-width: @tablet-width) {
+  .example__text {
+    font-size: 16px;
+    line-height: 24px;
+    padding-right: 10px;
+    padding-bottom: 30px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .example__flex {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.example__list {
+  display: flex;
+  margin-top: 25px;
+  justify-content: space-between;
+}
+
+@media (min-width: @tablet-width) {
+  .example__list {
+    width: 366px;
+  }
+}
+
 .example__item {
   width: 124px;
-  height: 56px;
-  border: 1px solid @dark-grey-2;
+  border: 1px solid @dark-grey-3;
   border-radius: 3px;
   position: relative;
+  padding-bottom: 15px;
+  padding-right: 5px;
+  padding-left: 5px;
+  box-sizing: border-box;
+}
+
+@media (min-width: @tablet-width) {
+  .example__item {
+    width: 162px;
+    padding-bottom: 20px;
+  }
 }
 
 .example__number {
@@ -40,6 +108,14 @@
   line-height: 24px;
   text-align: center;
   padding-top: 15px;
+}
+
+@media (min-width: @tablet-width) {
+  .example__number {
+    font-size: 30px;
+    line-height: 37px;
+    padding-top: 13px;
+  }
 }
 
 .example__description {
@@ -52,18 +128,73 @@
   text-transform: none;
   max-width: 80px;
   text-align: center;
-  margin: 0 22px;
+  margin: 0 14px;
   background-color: @basic-grey-2;
   color: @dark-grey;
 }
+
+@media (min-width: @tablet-width) {
+  .example__description {
+    font-size: 14px;
+    line-height: 14px;
+    background-color: @white;
+    bottom: -6px;
+    min-width: 142px;
+    max-width: 162px;
+    margin: 0 5px;
+    box-sizing: border-box;
+  }
+}
+
 
 .example__signature {
   font-family: "OswaldRegular", "Arial", sans-serif;
   font-weight: normal;
   font-size: 14px;
   line-height: 20px;
+  margin-top: 33px;
+  text-align: center;
 }
 
-.example__image {
-  display: none; //потом уберу
+@media (min-width: @tablet-width) {
+  .example__signature {
+    font-size: 20px;
+    line-height: 30px; //в макете указана другая величина, видимо, ошибка. там разбито на два текста. я сделал одним
+    margin-top: 30px;
+    text-align: right;
+    width: 180px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .example__image-wrapper {
+    display: inline-block;
+    height: 1080px;
+  }
+}
+
+.example__image--mobile {
+  display: inline-block;
+  margin-left: -20px;
+  margin-top: 27px;
+}
+
+.example__image--tablet {
+  display: none;
+}
+
+.example__image--desktop {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .example__image--mobile {
+    display: none;
+  }
+
+  .example__image--tablet {
+    display: inline-block;
+    padding-top: 45px;
+    padding-left: 30px;
+  }
 }

@@ -1,6 +1,17 @@
 .map {
-  height: 420px;
-  margin: 0 20px;
+  // padding: 0 20px;
+}
+
+.map__header {
+  display: flex;
+  padding: 0 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .map__header {
+    padding: 0 71px;
+    justify-content: space-between;
+  }
 }
 
 .map__title {
@@ -10,6 +21,19 @@
   line-height: 18px;
   color: @black-2;
   margin: 0;
+  padding-top: 32px;
+  padding-bottom: 10px;
+  width: 140px;
+}
+
+@media (min-width: @tablet-width) {
+  .map__title {
+    font-size: 20px;
+    line-height: 24px;
+    padding-top: 67px;
+    padding-bottom: 60px;
+    width: 180px;
+  }
 }
 
 .map__address {
@@ -18,4 +42,35 @@
   font-size: 14px;
   line-height: 20px;
   text-transform: none;
+  width: 140px;
+  margin: 0;
+  padding-top: 28px;
+  padding-bottom: 27px;
+}
+
+@media (min-width: @tablet-width) {
+  .map__address {
+    font-size: 16px;
+    line-height: 20px;
+    padding-top: 62px;
+    text-align: right;
+    width: 195px;
+  }
+}
+
+.map__google-map {
+  height: 362px;
+  background-color: @black; //потом уберу
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .map__google-map {
+    height: 400px;
+  }
+}
+
+.map__header--catalog {
+  background-color: @basic-grey;
 }

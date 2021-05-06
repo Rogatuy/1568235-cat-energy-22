@@ -1,6 +1,12 @@
 .working {
-  height: 447px;
-  margin: 0 20px;
+  margin: 0 20px 20px 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .working {
+    padding: 0 30px 10px 30px;
+    margin: 0;
+  }
 }
 
 .working__title {
@@ -10,16 +16,36 @@
   line-height: 40px;
   font-weight: normal;
   text-transform: none;
-  padding-top: 27px;
-  padding-bottom: 38px;
+  padding-top: 6px;
+  padding-bottom: 41px;
   padding-left: 0;
   margin: 0;
 }
+
+@media (min-width: @tablet-width) {
+  .working__title {
+    font-size: 60px;
+    line-height: 60px;
+    margin-top: 35px;
+    padding-bottom: 12px;
+  }
+}
+
 
 .working__list {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .working__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 60px;
+    border-bottom: 1px solid @light-grey-2; //не понимаю, почему подчеркивание идет не на всю ширину. вроде там марджинов нет.
+  }
 }
 
 .working__item {
@@ -31,4 +57,107 @@
   color: @dark-grey;
   padding-bottom: 26px;
   padding-left: 80px;
+  position: relative;
+}
+
+@media (min-width: @tablet-width) {
+  .working__item {
+    padding: 112px 60px 134px 0;
+    width: 324px;
+    font-size: 16px;
+    line-height: 24px;
+    box-sizing: border-box;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .working__item--useful {
+    background-image: url("../../img/working__item-bcg-1.svg");
+    background-position-x: 125px;
+    background-repeat: no-repeat;
+  }
+}
+
+.working__item--useful::before {
+  content: url("../../img/useful.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  top: -2px;
+}
+
+@media (min-width: @tablet-width) {
+  .working__item--useful::before {
+    content: url("../../img/useful-big.svg");
+    top: 0;
+  }
+}
+
+.working__item--powder::before {
+  content: url("../../img/powder.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  top: -2px;
+}
+
+@media (min-width: @tablet-width) {
+  .working__item--powder {
+    background-image: url("../../img/working__item-bcg-2.svg");
+    background-position-x: 125px;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .working__item--powder::before {
+    content: url("../../img/powder-big.svg");
+    top: 0;
+  }
+}
+
+.working__item--replacement::before {
+  content: url("../../img/replacement.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  top: -2px;
+}
+
+@media (min-width: @tablet-width) {
+  .working__item--replacement {
+    background-image: url("../../img/working__item-bcg-3.svg");
+    background-position-x: 125px;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .working__item--replacement::before {
+    content: url("../../img/replacement-big.svg");
+    top: 0;
+  }
+}
+
+.working__item--term::before {
+  content: url("../../img/term.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  top: -2px;
+}
+
+@media (min-width: @tablet-width) {
+  .working__item--term {
+    background-image: url("../../img/working__item-bcg-4.svg");
+    background-position-x: 125px;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .working__item--term::before {
+    content: url("../../img/term-big.svg");
+    top: 0;
+  }
 }

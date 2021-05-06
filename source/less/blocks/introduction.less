@@ -1,12 +1,26 @@
 .introduction {
-  height: 440px;
+  height: 435px;
   background-image: url("../../img/index-can-mobile 1.SVG"), url("../../img/index-introduction-bg.jpg");
   background-position: bottom center, top center;
   background-repeat: no-repeat, no-repeat;
+  background-size: 280px 270px, 320px 302px;
   position: relative;
 }
 
+@media (min-width: @tablet-width) {
+  .introduction {
+    background-image: url("../../img/index-can-tablet 1.SVG");
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: 709px 609px;
+    height: 860px;
+  }
+}
+
 .introduction__slogan {
+  margin: 0;
+  padding-top: 28px;
   font-weight: normal;
   font-size: 36px;
   line-height: 36px;
@@ -15,18 +29,41 @@
   text-align: center;
 }
 
+@media (min-width: @tablet-width) {
+  .introduction__slogan {
+    font-size: 60px;
+    line-height: 60px;
+    color: @black;
+    text-align: left;
+    padding: 50px 100px 0 117px;
+  }
+}
+
 .introduction__signature {
   font-weight: normal;
   font-size: 14px;
   line-height: 14px;
   color: @white;
   text-align: center;
+  padding-top: 10px;
+}
+
+@media (min-width: @tablet-width) {
+  .introduction__signature {
+    color: @black;
+    text-align: left;
+    font-size: 20px;
+    line-height: 20px;
+    padding-top: 20px;
+    padding-left: 117px;
+  }
 }
 
 .introduction__selection {
   display: inline-block;
+  vertical-align: middle;
   position: absolute;
-  bottom: 0;
+  bottom: -46px;
   left: 0;
   right: 0;
   text-align: center;
@@ -37,4 +74,15 @@
   margin: 0 auto;
   padding-top: 10px;
   box-sizing: border-box;
+}
+
+@media (min-width: @tablet-width) {
+  .introduction__selection {
+    height: 54px;
+    width: 244px;
+    padding-top: 17px;
+    top: 280px;
+    left: 113px;
+    margin: 0;
+  }
 }
