@@ -1,7 +1,18 @@
+.comment {
+  width: 280px;
+  margin: 0 auto;
+}
+
 @media (min-width: @tablet-width) {
   .comment {
     margin-top: 35px;
     margin-bottom: 41px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .comment {
+    width: 1220px;
   }
 }
 
@@ -28,7 +39,7 @@
 .comment__legeng::after {
   content: url("../../img/comment_after.svg");
   position: absolute;
-  left: 142px;
+  left: 143px;
   top: -9px;
 }
 
@@ -71,5 +82,12 @@
     font-size: 20px;
     line-height: 30px;
     width: 631px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .comment__text {
+    width: 1220px;
+    margin-bottom: 27px;
   }
 }

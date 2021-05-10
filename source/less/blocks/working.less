@@ -1,11 +1,40 @@
 .working {
-  margin: 0 20px 20px 20px;
+  width: 100%;
+  margin: 0 auto 20px auto;
 }
 
 @media (min-width: @tablet-width) {
   .working {
-    padding: 0 30px 10px 30px;
-    margin: 0;
+    padding-bottom: 10px;
+    margin: 0 auto;
+    border-bottom: 1px solid @light-grey-2;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .working {
+    border-bottom: none;
+    margin-top: 65px;
+    padding-bottom: 0;
+  }
+}
+
+
+.working__wrapper {
+  width: 280px;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .working__wrapper {
+    width: 708px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .working__wrapper {
+    width: 1220px;
+    margin-bottom: 20px;
   }
 }
 
@@ -44,7 +73,6 @@
     flex-wrap: wrap;
     justify-content: space-between;
     padding-top: 60px;
-    border-bottom: 1px solid @light-grey-2; //не понимаю, почему подчеркивание идет не на всю ширину. вроде там марджинов нет.
   }
 }
 
@@ -69,6 +97,27 @@
     box-sizing: border-box;
   }
 }
+
+@media (min-width: @desktop-width) {
+  .working__item {
+    padding: 112px 2px 104px 0;
+    width: 248px;
+    font-size: 16px;
+    line-height: 24px;
+    box-sizing: border-box;
+  }
+}
+
+.working__item--span {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .working__item--span {
+    display: inline;
+  }
+}
+
 
 @media (min-width: @tablet-width) {
   .working__item--useful {

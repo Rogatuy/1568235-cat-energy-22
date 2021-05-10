@@ -1,25 +1,89 @@
 .introduction {
-  height: 435px;
-  background-image: url("../../img/index-can-mobile 1.SVG"), url("../../img/index-introduction-bg.jpg");
-  background-position: bottom center, top center;
-  background-repeat: no-repeat, no-repeat;
-  background-size: 280px 270px, 320px 302px;
-  position: relative;
+  width: 100%;
+  background-image: url("../../img/index-introduction-bg.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100% 302px;
 }
 
 @media (min-width: @tablet-width) {
   .introduction {
+    width: 100%;
+    background-image: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .introduction::after {
+    content: " ";
+    background-color: @basic-green-opacity;
+    position: absolute;
+    left: 50%;
+    display: block;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+    height: 694px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .introduction::before {
+    content: " ";
+    position: absolute;
+    left: 50%;
+    display: block;
+    top: 0;
+    width: 100%;
+    z-index: -2;
+    height: 694px;
+    background-image: url("../../img/index-can-desktop\ 1\ bg.jpg");
+    background-repeat: no-repeat;
+  }
+}
+
+.introduction__wrapper {
+  height: 435px;
+  background-image: url("../../img/index-can-mobile 1.SVG");
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: 280px 270px;
+  position: relative;
+  width: 280px;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .introduction__wrapper {
     background-image: url("../../img/index-can-tablet 1.SVG");
     background-position: bottom center;
     background-repeat: no-repeat;
     position: relative;
     background-size: 709px 609px;
     height: 860px;
+    width: 708px;
+    margin: 0 auto;
   }
 }
 
+@media (min-width: @desktop-width) {
+  .introduction__wrapper {
+    background-image: url("../../img/index-can-desktop 1.SVG");
+    background-position-x: 447px;
+    background-position-y: 20px;
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: 552px 499px;
+    width: 1220px;
+    margin: 0 auto;
+    height: 655px;
+  }
+}
+
+
 .introduction__slogan {
-  margin: 0;
+  margin: 0 auto;
+  max-width: 320px;
   padding-top: 28px;
   font-weight: normal;
   font-size: 36px;
@@ -35,7 +99,15 @@
     line-height: 60px;
     color: @black;
     text-align: left;
-    padding: 50px 100px 0 117px;
+    padding: 50px 100px 0 87px;
+    margin: 0;
+    max-width: 414px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .introduction__slogan {
+    padding: 102px 100px 0 80px;
   }
 }
 
@@ -54,18 +126,25 @@
     text-align: left;
     font-size: 20px;
     line-height: 20px;
-    padding-top: 20px;
-    padding-left: 117px;
+    padding-top: 22px;
+    padding-left: 87px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .introduction__signature {
+    padding-top: 22px;
+    padding-left: 80px;
   }
 }
 
 .introduction__selection {
   display: inline-block;
   vertical-align: middle;
-  position: absolute;
-  bottom: -46px;
-  left: 0;
-  right: 0;
+  position: relative;
+  bottom: -288px;
+  // left: 0;
+  // right: 0;
   text-align: center;
   color: @white;
   height: 40px;
@@ -78,11 +157,17 @@
 
 @media (min-width: @tablet-width) {
   .introduction__selection {
-    height: 54px;
     width: 244px;
     padding-top: 17px;
-    top: 280px;
-    left: 113px;
+    padding-bottom: 39px;
+    top: 28px;
+    left: 81px;
     margin: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .introduction__selection {
+    top: 29px;
   }
 }

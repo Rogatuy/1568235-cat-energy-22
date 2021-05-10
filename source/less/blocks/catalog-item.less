@@ -1,5 +1,5 @@
 .catalog-item {
-  padding: 0 20px;
+  width: 100%;
   box-sizing: border-box;
   border-bottom: 1px solid @light-grey-3;
 }
@@ -16,13 +16,22 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .catalog-item {
+    margin: 130px 40px 15px 40px;
+    padding: 0;
+    border-bottom: none;
+    width: 245px;
+  }
+}
+
 .catalog-item__wrapper {
   display: grid;
   grid-template-columns: 140px 140px;
   grid-template-rows: 75px 70px 40px;
-  margin: 0;
-  margin-bottom: 23px;
+  margin: 0 auto 23px auto;
   padding: 0;
+  width: 280px;
 }
 
 @media (min-width: @tablet-width) {
@@ -30,6 +39,16 @@
     grid-template-columns: 324px;
     grid-template-rows: 163px 50px 140px 39px;
     margin-bottom: 23px;
+    width: 324px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-item__wrapper {
+    grid-template-columns: 245px;
+    grid-template-rows: 161px 50px 140px 39px;//поправить!
+    margin-bottom: 23px;
+    width: 245px;
   }
 }
 
@@ -72,6 +91,12 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .catalog-item__link--heading {
+    padding: 0 50px;
+  }
+}
+
 .catalog-item__heading {
   font-family: "OswaldRegular", "Arial", sans-serif;
   font-weight: normal;
@@ -85,6 +110,12 @@
   .catalog-item__heading {
     font-size: 20px;
     line-height: 24px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-item__heading {
+    line-height: 21px;
   }
 }
 
@@ -129,6 +160,22 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .catalog-item__description,
+  .catalog-item__number {
+    font-size: 16px;
+    line-height: 16px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid @dark-grey-3;
+    min-width: 85px;
+  }
+
+  .catalog-item__number {
+    text-align: right;
+  }
+}
+
 
 .catalog-item__order {
   border: none;
@@ -157,6 +204,15 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .catalog-item__order {
+    grid-row-start: 4;
+    grid-row-end: 5;
+    width: 168px;
+    margin: 0 auto;
+  }
+}
+
 .catalog-item__list {
   margin: 0;
   display: grid;
@@ -172,6 +228,17 @@
     grid-row-end: 4;
     grid-template-rows: 32px 32px 32px;
     grid-template-columns: 125px 125px;
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-item__list {
+    padding: 0 38px;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-template-rows: 32px 32px 32px;
+    grid-template-columns: 85px 85px;
     margin-top: 10px;
   }
 }

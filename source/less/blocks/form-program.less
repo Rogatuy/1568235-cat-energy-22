@@ -31,6 +31,16 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .form-program__wrapper {
+    display: flex;
+    width: 1220px;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+}
+
+
 .form-program__send {
   border: none;
   width: 280px;
@@ -51,6 +61,15 @@
     padding: 15px 0;
     font-size: 20px;
     line-height: 20px;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-program__send {
+    width: 568px;
+    line-height: 20px;
+    margin-top: 0;
   }
 }
 
@@ -75,3 +94,11 @@
     padding-left: 60px;
   }
 }
+
+@media (min-width: @desktop-width) {
+  .form-program__note {
+    padding-top: 17px;
+    padding-left: 77px;
+  }
+}
+

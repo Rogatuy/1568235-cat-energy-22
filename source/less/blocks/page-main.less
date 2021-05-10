@@ -1,9 +1,14 @@
+.page-main__form {
+  width: 100%;
+}
+
 .page-main__form-header {
   font-family: "OswaldRegular", "Arial", sans-serif;
   font-weight: normal;
   font-size: 36px;
   line-height: 36px;
-  margin: 0;
+  margin: 0 auto;
+  width: 320px;
   padding-top: 28px;
   padding-left: 20px;
   padding-bottom: 36px;
@@ -19,6 +24,16 @@
     padding-top: 51px;
     padding-left: 70px;
     padding-bottom: 55px;
+    width: 768px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-main__form-header {
+    padding-top: 68px;
+    padding-left: 0;
+    padding-bottom: 55px;
+    width: 1220px;
   }
 }
 
@@ -28,7 +43,8 @@
   font-size: 14px;
   line-height: 18px;
   padding: 0 20px 14px 20px;
-  margin: 0;
+  margin: 0 auto;
+  width: 280px;
 }
 
 @media (min-width: @tablet-width) {
@@ -37,6 +53,26 @@
     line-height: 30px;
     padding-left: 70px;
     padding-bottom: 35px;
+    width: 708px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-main__form-paragraph {
+    padding-left: 20px;
+    padding-bottom: 35px;
+    width: 1220px;
+  }
+}
+
+.page-main__catalog-header-wrapper {
+  width: 100%;
+  border-bottom: 1px solid @light-grey-3;
+}
+
+@media (min-width: @tablet-width) {
+  .page-main__catalog-header-wrapper {
+    border-bottom: none;
   }
 }
 
@@ -45,13 +81,13 @@
   font-weight: normal;
   font-size: 36px;
   line-height: 36px;
-  border-bottom: 1px solid @light-grey-3;
-  margin: 0;
-  padding-top: 29px;
-  padding-bottom: 39px;
+  padding-top: 28px;
+  padding-bottom: 40px;
   padding-left: 20px;
   text-transform: none;
   box-sizing: border-box;
+  margin: 0 auto;
+  width: 320px;
 }
 
 @media (min-width: @tablet-width) {
@@ -61,9 +97,17 @@
     line-height: 60px;
     border-bottom: none;
     padding-top: 50px;
-    padding-left: 30px;
+    padding-left: 0;
     box-sizing: border-box;
     padding-bottom: 35px;
+    width: 708px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-main__catalog-header {
+    width: 1220px;
+    padding-top: 67px;
   }
 }
 
@@ -71,5 +115,13 @@
   .page-main__catalog-wrapper {
     display: flex;
     flex-wrap: wrap;
+    width: 768px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-main__catalog-wrapper {
+    width: 1300px;
   }
 }

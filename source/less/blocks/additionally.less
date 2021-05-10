@@ -1,6 +1,19 @@
+.additionally {
+  width: 280px;
+  margin: 0 auto;
+}
+
 @media (min-width: @tablet-width) {
   .additionally {
     padding-bottom: 63px;
+    width: 628px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .additionally {
+    padding-bottom: 73px;
+    width: 1220px;
   }
 }
 
@@ -25,8 +38,8 @@
 .additionally__ledeng::after {
   content: url("../../img/additionally_after.svg");
   position: absolute;
-  left: 160px;
-  top: -8px;
+  left: 163px;
+  top: -7px;
 }
 
 @media (min-width: @tablet-width) {
@@ -34,14 +47,14 @@
     content: url("../../img/additionally_after_tablet.svg");
     position: absolute;
     left: 250px;
-    top: -8px;
+    top: -13px;
   }
 
   .additionally__ledeng::before {
     content: url("../../img/additionally_before_tablet.svg");
     position: absolute;
     left: -72px;
-    top: -8px;
+    top: -13px;
   }
 }
 
@@ -64,6 +77,17 @@
     grid-template-rows: 72px 72px;
     padding-top: 25px;
     padding-left: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .additionally__list {
+    display: grid;
+    grid-template-columns: 325px 325px 325px 245px;
+    grid-template-rows: 72px;
+    padding-top: 25px;
+    padding-left: 0;
+    margin-bottom: 23px;
   }
 }
 

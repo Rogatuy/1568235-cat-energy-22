@@ -1,7 +1,7 @@
 .data {
   border-bottom: 1px solid @light-grey;
   padding-bottom: 12px;
-  width: 320px;
+  width: 100%;
   box-sizing: border-box;
 }
 
@@ -11,11 +11,18 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .data {
+    width: 569px;
+    padding-bottom: 0;
+  }
+}
+
 .data__list {
   list-style: none;
   padding: 0;
   padding-top: 10px;
-  margin: 0;
+  margin: 0 auto;
   padding-bottom: 10px;
   box-sizing: border-box;
   width: 280px;
@@ -25,6 +32,14 @@
   .data__list {
     padding-bottom: 43px;
     width: 632px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .data__list {
+    padding-bottom: 43px;
+    width: 569px;
+    margin: 0;
   }
 }
 
@@ -70,6 +85,7 @@
   text-transform: uppercase;
   color: @dark-grey;
   flex-grow: 1;
+  min-width: 172px;
 }
 
 @media (min-width: @tablet-width) {

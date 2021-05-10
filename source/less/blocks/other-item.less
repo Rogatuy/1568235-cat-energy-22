@@ -15,6 +15,13 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .other-item {
+    margin: 130px 40px 15px 40px;
+    width: 245px;
+  }
+}
+
 .other-item__wrapper {
   display: flex;
   flex-direction: column;
@@ -28,6 +35,14 @@
 @media (min-width: @tablet-width) {
   .other-item__image {
     padding-top: 20px;
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .other-item__image {
+    padding-top: 15px;
     width: 60px;
     height: 60px;
   }
@@ -53,6 +68,13 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .other-item__inscription-title {
+    padding: 48px 10px 5px 10px;
+  }
+}
+
+
 .other-item__inscription-text {
   font-family: "Arial", sans-serif;
   font-weight: normal;
@@ -69,6 +91,12 @@
     line-height: 18px;
     text-align: center;
     padding: 18px 30px 5px 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .other-item__inscription-text {
+    padding: 18px 0 5px 0;
   }
 }
 
@@ -99,11 +127,10 @@
   }
 }
 
-@media (min-width: @tablet-width) {
-  .other-item__inscription-text {
-    font-size: 16px;
-    line-height: 18px;
-    text-align: center;
-    padding: 18px 30px 5px 30px;
+@media (min-width: @desktop-width) {
+  .other-item__open {
+    width: 169px;
+    margin-top: 80px;
+    margin-bottom: 0;
   }
 }

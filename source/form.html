@@ -8,72 +8,78 @@
   </head>
   <body class="page__body">
     <header class="page-header">
-      <section class="page-header__header">
-        <a class="page-header__logo">
-          <img src="img/header-logo-2.svg" width="101" height="18" alt="Кэт энерджи">
-        </a>
-        <button class="page-header__button" type="button">
-          <img src="img/cross_mobile.svg" width="18" height="18">
-        </button>
+      <section class="page-header__wrapper">
+        <section class="page-header__header">
+          <section class="page-header__header--wrapper">
+            <a class="page-header__logo">
+              <img src="img/header-logo-2.svg" width="101" height="18" alt="Кэт энерджи">
+            </a>
+            <button class="page-header__button" type="button">
+              <img src="img/cross_mobile.svg" width="18" height="18">
+            </button>
+          </section>
+        </section>
+        <nav class="main-nav">
+          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a href="index.html">
+                  Главная
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="catalog.html">
+                  Каталог продукции
+                </a>
+              </li>
+              <li class="main-nav__item main-nav__item--active">
+                <a href="form.html">
+                  Подбор программы
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </section>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a href="index.html">
-                Главная
-              </a>
-            </li>
-            <li class="main-nav__item">
-              <a href="catalog.html">
-                Каталог продукции
-              </a>
-            </li>
-            <li class="main-nav__item main-nav__item--active">
-              <a href="form.html">
-                Подбор программы
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
     </header>
     <main class="page-main__form">
       <h1 class="page-main__form-header">Подбор программы</h1>
       <p class="page-main__form-paragraph">Заполните анкету, и мы подберем <br> программу питания для вашего кота</p>
         <form class="form-program" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="form-program__data data">
-            <ul class="data__list">
-              <li class="data__item">
-                <label class="data__label" for="name">Имя:*</label>
-                <input class="data__text" id="name" type="text" placeholder="Барсик">
-              </li>
-              <li class="data__item">
-                <label class="data__label" for="weight">Вес (кг):*</label>
-                <input class="data__text" id="weight" type="text" placeholder="7">
-              </li>
-              <li class="data__item">
-                <label class="data__label" for="years">Возраст (лет):</label>
-                <input class="data__text" id="years" type="text" placeholder="7">
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset class="form-program__program-type program-type">
-            <ul class="program-type__list">
-              <li class="program-type__item">
-                <input class="program-type__input" type="radio" name="program-group" value="slimming" id="filter-slimming" checked>
-                <label for="filter-slimming" class="program-type__label">Похудение</label>
-              </li>
-              <li class="program-type__item">
-                <input class="program-type__input" type="radio" name="program-group" value="weight" id="filter-weight" checked>
-                <label for="filter-weight" class="program-type__label">Набор массы</label>
-              </li>
-              <li class="program-type__item">
-                <input class="program-type__input" type="radio" name="program-group" value="advice" id="filter-advice" checked>
-                <label for="filter-advice" class="program-type__label">Не знаю (нужен ваш совет)</label>
-              </li>
-          </fieldset>
+          <section class="form-program__wrapper">
+            <fieldset class="form-program__data data">
+              <ul class="data__list">
+                <li class="data__item">
+                  <label class="data__label" for="name">Имя:*</label>
+                  <input class="data__text" id="name" type="text" placeholder="Барсик">
+                </li>
+                <li class="data__item">
+                  <label class="data__label" for="weight">Вес (кг):*</label>
+                  <input class="data__text" id="weight" type="text" placeholder="7">
+                </li>
+                <li class="data__item">
+                  <label class="data__label" for="years">Возраст (лет):</label>
+                  <input class="data__text" id="years" type="text" placeholder="7">
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="form-program__program-type program-type">
+              <ul class="program-type__list">
+                <li class="program-type__item">
+                  <input class="program-type__input" type="radio" name="program-group" value="slimming" id="filter-slimming" checked>
+                  <label for="filter-slimming" class="program-type__label">Похудение</label>
+                </li>
+                <li class="program-type__item">
+                  <input class="program-type__input" type="radio" name="program-group" value="weight" id="filter-weight" checked>
+                  <label for="filter-weight" class="program-type__label">Набор массы</label>
+                </li>
+                <li class="program-type__item">
+                  <input class="program-type__input" type="radio" name="program-group" value="advice" id="filter-advice" checked>
+                  <label for="filter-advice" class="program-type__label">Не знаю (нужен ваш совет)</label>
+                </li>
+            </fieldset>
+          </section>
           <fieldset class="form-program__connect connect">
             <legend class="connect__legeng">Контактные данные (владельца кота)</legend>
             <ul class="connect__list">
@@ -116,17 +122,20 @@
           </fieldset>
         </form>
         <section class="map">
-          <div class="map__wrapper">
-            <section class="map__header map__header--catalog">
-              <h2 class="visually-hidden">Карта и адрес</h2>
-              <h3 class="map__title">приглашаем <br>к сотрудничеству дилеров!</h3>
-              <p class="map__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-            </section>
-            <div class="map__google-map">
-              <irfame></irfame>
+          <section class="map">
+            <div class="map__wrapper map__wrapper--grey">
+              <section class="map__header">
+                <section class="map__header-wrapper">
+                  <h2 class="visually-hidden">Карта и адрес</h2>
+                  <h3 class="map__title">приглашаем <br>к сотрудничеству дилеров!</h3>
+                  <p class="map__address">ул. Большая Конюшенная, д. 19/8 <span class="map_address_margin"><br></span> Санкт-Петербург</p>
+                </section>
+              </section>
+              <div class="map__google-map">
+                <irfame></irfame>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
