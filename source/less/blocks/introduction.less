@@ -1,14 +1,13 @@
 .introduction {
   width: 100%;
-  background-image: url("../../img/index-introduction-bg.jpg");
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: 100% 302px;
+  background-image: url("../../img/index-introduction-bg.png"), url("../../img/index-introduction-bg-3.jpg");
+  background-position: top center, top center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100% 302px, 320px 302px;
 }
 
 @media (min-width: @tablet-width) {
   .introduction {
-    width: 100%;
     background-image: none;
   }
 }
@@ -21,7 +20,7 @@
     left: 50%;
     display: block;
     top: 0;
-    width: 100%;
+    min-width: 720px;
     z-index: -1;
     height: 694px;
   }
@@ -34,11 +33,12 @@
     left: 50%;
     display: block;
     top: 0;
-    width: 100%;
+    width: 720px;
     z-index: -2;
     height: 694px;
     background-image: url("../../img/index-can-desktop\ 1\ bg.jpg");
     background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 
@@ -143,8 +143,6 @@
   vertical-align: middle;
   position: relative;
   bottom: -288px;
-  // left: 0;
-  // right: 0;
   text-align: center;
   color: @white;
   height: 40px;
@@ -153,6 +151,15 @@
   margin: 0 auto;
   padding-top: 10px;
   box-sizing: border-box;
+  text-decoration: none;
+}
+
+.introduction__selection:hover {
+  background-color: @basic-green-1;
+}
+
+.introduction__selection:active {
+  color: @basic-white-opacity;
 }
 
 @media (min-width: @tablet-width) {

@@ -88,6 +88,15 @@
   min-width: 172px;
 }
 
+.data__text:focus {
+  border: 2px solid @dark-grey;
+  padding-left: 13px;
+}
+
+.data__text--important:invalid {
+  border: 2px solid @basic-red;
+}
+
 @media (min-width: @tablet-width) {
   .data__text {
     font-size: 20px;

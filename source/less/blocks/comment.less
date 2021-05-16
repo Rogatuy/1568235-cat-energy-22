@@ -7,6 +7,7 @@
   .comment {
     margin-top: 35px;
     margin-bottom: 41px;
+    width: 708px;
   }
 }
 
@@ -61,7 +62,7 @@
 
 .comment__text {
   height: 150px;
-  padding: 8px 14px;
+  padding: 8px 13px;
   margin: 0;
   border: 1px solid @light-grey-4;
   box-sizing: border-box;
@@ -75,6 +76,11 @@
   margin-bottom: 25px;
 }
 
+.comment__text:focus {
+  border: 2px solid @dark-grey;
+  padding: 7px 12px;
+}
+
 @media (min-width: @tablet-width) {
   .comment__text {
     height: 174px;
@@ -85,7 +91,7 @@
   }
 }
 
-@media (min-width: @tablet-width) {
+@media (min-width: @desktop-width) {
   .comment__text {
     width: 1220px;
     margin-bottom: 27px;

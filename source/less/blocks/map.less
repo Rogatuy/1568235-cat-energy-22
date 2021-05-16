@@ -26,6 +26,7 @@
     width: 1440px;
     margin: 0 auto;
     position: relative;
+    padding: 0;
   }
 }
 
@@ -133,13 +134,18 @@
 .map__google-map {
   height: 362px;
   width: 100%;
-  background-color: @black; //потом уберу
   margin: 0;
   padding: 0;
 }
 
 @media (min-width: @tablet-width) {
   .map__google-map {
+    height: 400px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .map__google-map iframe {
     height: 400px;
   }
 }

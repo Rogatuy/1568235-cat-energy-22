@@ -216,6 +216,8 @@
   grid-column-start: 1;
   grid-column-end: -1;
   margin-top: 18px;
+  text-decoration: none;
+  color: @black;
 }
 
 @media (min-width: @tablet-width) {
@@ -236,6 +238,18 @@
   content: url("../../img/programs__catalog-arrow.svg");
   background-repeat: no-repeat;
   padding-left: 15px;
+}
+
+.programs__catalog:active {
+  color: @basic-black-opacity;
+}
+
+.programs__catalog:hover::after {
+  content: url("../../img/programs__catalog-arrow-focus.svg");
+}
+
+.programs__catalog:active::after {
+  content: url("../../img/programs__catalog-arrow-active.svg");
 }
 
 @media (min-width: @tablet-width) {

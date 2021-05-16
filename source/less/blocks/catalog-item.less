@@ -179,8 +179,8 @@
 
 .catalog-item__order {
   border: none;
-  width: 280px;
-  padding: 0;
+  width: 270px;
+  padding: 10px 5px 10px 5px;
   background-color: @basic-green;
   color: @white;
   font-family: "OswaldRegular", "Arial", sans-serif;
@@ -193,6 +193,16 @@
   grid-column-end: 3;
   grid-row-start: 3;
   grid-row-end: 4;
+  text-align: center;
+  text-decoration: none;
+}
+
+.catalog-item__order:hover {
+  background-color: @basic-green-1;
+}
+
+.catalog-item__order:active {
+  color: @basic-white-opacity;
 }
 
 @media (min-width: @tablet-width) {
@@ -200,6 +210,8 @@
     grid-row-start: 4;
     grid-row-end: 5;
     width: 248px;
+    padding: 0;
+    padding-top: 10px;
     margin: 0 auto;
   }
 }

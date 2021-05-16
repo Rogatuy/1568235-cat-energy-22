@@ -1,5 +1,6 @@
 .additionally-products {
   width: 100%;
+  position: relative;
 }
 
 @media (min-width: @tablet-width) {
@@ -38,11 +39,14 @@
   font-size: 24px;
   line-height: 24px;
   text-transform: none;
-  margin: 0;
+  margin: 0 auto;
   padding-top: 26px;
   padding-bottom: 35px;
-  position: relative;
   border-bottom: 1px solid @light-grey-2;
+  background-color: @white;
+  padding-right: 0;
+  padding-left: 30px;
+  width: 280px;
 }
 
 @media (min-width: @tablet-width) {
@@ -53,6 +57,7 @@
     padding-left: 37px;
     padding-bottom: 80px;
     border-bottom: none;
+    width: 708px;
   }
 }
 
@@ -65,11 +70,15 @@
 }
 
 .additionally-products__header::after {
-  content: url("../../img/catalog-additionally-products-line.svg");
-  background-repeat: no-repeat;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: @basic-green;
   position: absolute;
-  right: -20px;
-  top: 20px;
+  top: 40px;
+  z-index: -1;
+  right: 0;
+  left: 0;
 }
 
 @media (min-width: @tablet-width) {
@@ -79,22 +88,6 @@
     position: absolute;
     left: 410px;
     top: 47px;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .additionally-products__header::before {
-    content: url("../../img/catalog_tablet_line_before.svg");
-    background-repeat: no-repeat;
-    position: absolute;
-    left: -30px;
-    top: 47px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .additionally-products__header::before {
-    width: 100%;
   }
 }
 
@@ -250,9 +243,9 @@
   }
 }
 
-
 .additionally-products__order {
-  width: 280px;
+  display: inline-block;
+  width: 260px;
   background-color: @basic-green;
   border: none;
   color: @white;
@@ -263,6 +256,16 @@
   line-height: 20px;
   text-transform: uppercase;
   padding: 10px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.additionally-products__order:hover {
+  background-color: @basic-green-1;
+}
+
+.additionally-products__order:active {
+  color: @basic-white-opacity;
 }
 
 @media (min-width: @tablet-width) {
@@ -273,8 +276,9 @@
 
 @media (min-width: @desktop-width) {
   .additionally-products__order {
-    width: 244px;
+    width: 234px;
     padding: 5px;
+    padding-top: 10px;
     margin: 0;
   }
 }

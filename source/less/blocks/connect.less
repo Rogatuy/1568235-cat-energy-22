@@ -94,6 +94,7 @@
 
 .connect__item {
   display: flex;
+  position: relative;
 }
 
 @media (min-width: @desktop-width) {
@@ -119,6 +120,11 @@
   flex-grow: 1;
 }
 
+.connect__text:focus {
+  border: 2px solid @dark-grey;
+  padding: 13px;
+}
+
 @media (min-width: @tablet-width) {
   .connect__text {
     font-size: 20px;
@@ -126,5 +132,72 @@
     height: 52px;
     margin-bottom: 20px;
     padding: 20px;
+  }
+}
+
+.connect__text--email + svg {
+  position: absolute;
+  right: 0;
+  padding-top: 17px;
+  padding-right: 15px;
+}
+
+@media (min-width: @desktop-width) {
+  .connect__text--email + svg {
+    right: 8px;
+    padding-top: 20px;
+    padding-right: 15px;
+  }
+}
+
+.connect__text--phone + svg {
+  position: absolute;
+  right: 0;
+  padding-top: 14px;
+  padding-right: 13px;
+}
+
+@media (min-width: @desktop-width) {
+  .connect__text--phone + svg {
+    right: 5px;
+    padding-top: 14px;
+    padding-right: 13px;
+  }
+}
+
+.connect__text--email:invalid {
+  border: 2px solid @basic-red;
+}
+
+.connect__text--phone:focus + svg path {
+  stroke: @basic-green;
+}
+
+.connect__text--email:focus + svg line,
+.connect__text--email:focus + svg path {
+  stroke: @basic-green;
+}
+
+.connect__text--email:invalid + svg line,
+.connect__text--email:invalid + svg path {
+  stroke: @basic-red;
+}
+
+@media (min-width: @tablet-width) {
+  .connect__item--phone::after {
+    padding-top: 16px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .connect__item--phone::after {
+    padding-right: 18px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .connect__item--email::after {
+    padding-right: 22px;
+    padding-top: 18px;
   }
 }
