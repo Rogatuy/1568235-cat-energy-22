@@ -31,6 +31,7 @@
 @media (min-width: @tablet-width) {
   .data__list {
     padding-bottom: 43px;
+    padding-left: 3px;
     width: 632px;
   }
 }
@@ -90,7 +91,7 @@
 
 .data__text:focus {
   border: 2px solid @dark-grey;
-  padding-left: 13px;
+  padding-left: 14px;
 }
 
 .data__text--important:invalid {
@@ -104,5 +105,11 @@
     height: 52px;
     padding-left: 20px;
     flex-grow: 1;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .data__text:focus {
+    padding-left: 20px;
   }
 }
