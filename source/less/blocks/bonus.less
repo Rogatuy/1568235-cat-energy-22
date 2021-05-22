@@ -1,12 +1,77 @@
-.bonus {
-  height: 363px;
-  margin: 0 20px;
-  background-color: @basic-green;
+
+@media (min-width: @tablet-width) {
+  .bonus {
+    min-height: 200px;
+    margin: 69px auto 76px auto;
+    background-color: @basic-green;
+    width: 708px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .bonus {
+    min-height: 200px;
+    margin: 0;
+    margin-top: 175px;
+    margin-left: 40px;
+    background-color: @basic-green;
+    width: 245px;
+  }
+}
+
+.bonus__wrapper {
+  margin: 39px auto 35px auto;
+  width: 280px;
+  min-height: 289px;
+  background-image: url("../../img/bonus_wrapper_mobile.png");
+  background-size: 280px 289px;
+}
+
+@media (min-resolution: 2dppx) {
+  .bonus__wrapper {
+    background-image: url("../../img/bonus_wrapper_mobile@2x.png");
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .bonus__wrapper {
+    min-height: 200px;
+    display: flex;
+    width: 708px;
+    background-image: url("../../img/bonus_wrapper_tablet.png");
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .bonus__wrapper {
+    min-height: 289px;
+    display: flex;
+    width: 245px;
+    margin: 0;
+    flex-direction: column;
+    background-image: url("../../img/bonus_wrapper_desktop.png");
+  }
 }
 
 .bonus__image {
-  background-color: @basic-green;
   margin: 0 auto;
+  padding: 58px 101px 0 101px;
+}
+
+@media (min-width: @tablet-width) {
+  .bonus__image {
+    padding-left: 79px;
+    display: inline-block;
+    margin: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .bonus__image {
+    padding: 0;
+    display: inline-block;
+    margin: 58px auto 0 auto;
+  }
 }
 
 .bonus__text {
@@ -18,4 +83,30 @@
   text-align: center;
   text-transform: none;
   color: @white;
+  margin: 0;
+  padding-top: 47px;
+}
+
+@media (min-width: @tablet-width) {
+  .bonus__text {
+    text-align: start;
+    display: inline-block;
+    width: 340px;
+    min-height: 100px;
+    box-sizing: border-box;
+    padding-left: 165px;
+    padding-top: 71px;
+    vertical-align: middle;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .bonus__text {
+    width: 170px;
+    margin: 50px auto 0 auto;
+    text-align: center;
+    padding-left: 0;
+    padding-top: 0;
+    vertical-align: middle;
+  }
 }

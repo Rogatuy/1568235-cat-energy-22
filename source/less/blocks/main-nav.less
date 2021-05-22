@@ -1,33 +1,103 @@
+@media (min-width: @tablet-width) {
+  .main-nav {
+    width: 440px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    width: 1015px;
+  }
+}
+
 .main-nav__wrapper {
-  margin: 0 auto;
+  width: 100%;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav__wrapper {
+    width: 440px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav__wrapper {
+    width: 1015px;
+  }
 }
 
 .main-nav__list {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav__list {
+    display: flex;
+    width: 440px;
+    justify-content: right;
+    margin: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav__list {
+    width: 1015px;
+    justify-content: flex-end;
+  }
 }
 
 .main-nav__item {
   display: inline-block;
+  vertical-align: middle;
   font-family: "OswaldMedium", "Arial", sans-serif;
   font-size: 20px;
   line-height: 20px;
-  width: 320px;
+  width: 100%;
   text-align: center;
-  padding-top: 22px;
+  padding-top: 23px;
   padding-bottom: 22px;
   border-bottom: 1px solid @light-grey-2;
-  box-sizing: border-box;
+  text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav__item {
+    font-family: "OswaldRegular", "Arial", sans-serif;
+    font-size: 18px;
+    line-height: 25px;
+    min-width: max-content;
+    padding-top: 0;
+    border: none;
+    display: inline-block;
+    padding-left: 36px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav__item {
+    font-size: 20px;
+    line-height: 30px;
+    width: max-content;
+    padding-left: 35px;
+    text-align: right;
+  }
 }
 
 .main-nav__item a {
   text-decoration: none;
-  font-family: "OswaldMedium", "Arial", sans-serif;
-  font-size: 20px;
-  line-height: 20px;
-  text-transform: uppercase;
+  color: @black;
 }
+
+
+@media (min-width: @desktop-width) {
+  .main-nav__item--desktop-index a {
+    color: @white;
+  }
+}
+
 
 .main-nav__item a:hover {
   opacity: 0.6;
@@ -37,4 +107,20 @@
   border-bottom: 2px solid @basic-green;
   pointer-events: none;
   cursor: default;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav__item--active a {
+    padding-bottom: 6px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav__item--active&.main-nav__item--desktop-index a {
+    border-bottom: 2px solid @white;
+  }
+}
+
+.main-nav__toggle {
+  display: none;
 }
