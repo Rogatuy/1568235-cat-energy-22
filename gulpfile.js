@@ -14,7 +14,6 @@ const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
 
-
 // Styles
 
 const styles = () => {
@@ -122,6 +121,10 @@ exports.copy = copy;
 const clean = () => {
   return del("build");
 };
+
+};
+
+exports.html = html;
 
 // Server
 
