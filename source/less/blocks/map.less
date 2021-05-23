@@ -106,12 +106,12 @@
   }
 }
 
-.map_address_margin {
+.map__margin {
   display: none;
 }
 
 @media (min-width: @tablet-width) {
-  .map_address_margin {
+  .map__margin {
     display: block;
   }
 }
@@ -127,6 +127,10 @@
   .map__google-map {
     height: 400px;
   }
+}
+
+.map__google-map iframe {
+  width: 100%;
 }
 
 @media (min-width: @tablet-width) {
