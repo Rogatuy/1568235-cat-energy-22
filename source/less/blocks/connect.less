@@ -136,6 +136,11 @@
   flex-grow: 1;
 }
 
+.connect__text:hover {
+  border: 1px solid @dark-grey-3;
+  padding: 14px;
+}
+
 .connect__text:focus {
   border: 2px solid @dark-grey;
   padding: 14px;
@@ -147,6 +152,10 @@
     line-height: 30px;
     height: 52px;
     margin-bottom: 20px;
+    padding: 20px;
+  }
+
+  .connect__text:hover {
     padding: 20px;
   }
 }
@@ -196,6 +205,10 @@
 
 .connect__text--phone:focus + svg path {
   stroke: @basic-green;
+}
+
+.connect__text--phone:invalid + svg path {
+  stroke: @basic-red;
 }
 
 .connect__text--email:focus + svg line,

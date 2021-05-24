@@ -76,12 +76,34 @@
   }
 }
 
-.page-header__button {
+.page-header__button-close {
   display: none;
   background-color: transparent;
+  position: absolute;
   border: none;
   color: none;
   padding: 0;
-  padding-left: 67px;
-  margin-top: 15px;
+  margin: 0;
+  background-image: url("../../img/cross_mobile.svg");
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  right: 22px;
+  top: 20px;
+}
+
+.page-header__button-open {
+  display: block;
+  background-color: transparent;
+  position: absolute;
+  border: none;
+  color: none;
+  padding: 0;
+  margin: 0;
+  background-image: url("../../img/hamburger_mobile.svg");
+  width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
+  right: 22px;
+  top: 20px;
 }

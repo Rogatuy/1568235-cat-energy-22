@@ -61,7 +61,7 @@
   .map__title {
     font-size: 20px;
     line-height: 24px;
-    padding-top: 67px;
+    padding-top: 63px;
     padding-bottom: 60px;
     width: 180px;
   }
@@ -91,7 +91,7 @@
   .map__address {
     font-size: 16px;
     line-height: 20px;
-    padding-top: 62px;
+    padding-top: 60px;
     text-align: right;
     width: 195px;
   }
@@ -121,11 +121,37 @@
   width: 100%;
   margin: 0;
   padding: 0;
+  background-image: url("../../img/map-mobile-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/map-mobile-bg@2x.png");
+  }
 }
 
 @media (min-width: @tablet-width) {
   .map__google-map {
     height: 400px;
+    background-image: url("../../img/map-tablet-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/map-tablet-bg@2x.png");
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .map__google-map {
+    background-image: url("../../img/map-desktop-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/map-desktop-bg@2x.png");
+    }
   }
 }
 
