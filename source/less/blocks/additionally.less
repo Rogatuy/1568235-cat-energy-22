@@ -143,11 +143,23 @@
   padding-right: 15px;
 }
 
+.additionally__input:hover + label::before,
+.additionally__input:focus + label::before {
+  content: url("../../img/checkbox_hover.svg");
+  padding-right: 15px;
+}
+
 @media (min-width: @tablet-width) {
   .additionally__input + label::before {
     content: url("../../img/checkbox_tablet.svg");
     padding-right: 17px;
     padding-top: 2px;
+  }
+
+  .additionally__input:hover + label::before,
+  .additionally__input:focus + label::before {
+    content: url("../../img/checkbox_tablet_hover.svg");
+    padding-right: 17px;
   }
 }
 
@@ -156,10 +168,22 @@
   padding-right: 15px;
 }
 
+.additionally__input:checked:hover + label::before,
+.additionally__input:checked:focus + label::before {
+  content: url("../../img/checkbox_checked_hover.svg");
+  padding-right: 15px;
+}
+
 @media (min-width: @tablet-width) {
   .additionally__input:checked + label::before {
     content: url("../../img/checkbox_checked_tablet.svg");
     padding-right: 17px;
     padding-top: 2px;
+  }
+
+  .additionally__input:checked:hover + label::before,
+  .additionally__input:checked:focus + label::before {
+    content: url("../../img/checkbox_checked_tablet_hover.svg");
+    padding-right: 17px;
   }
 }

@@ -37,7 +37,7 @@
   box-sizing: border-box;
   margin: 0 auto 20px auto;
   display: grid;
-  grid-template-rows: 76px 113px 49px;
+  grid-template-rows: 76px 1fr 49px;
   grid-template-columns: 71px 1fr;
 }
 
@@ -46,7 +46,7 @@
     width: auto;
     padding: 53px;
     grid-template-columns: 382px 1fr;
-    grid-template-rows: 84px 152px 32px;
+    grid-template-rows: 84px 1fr 32px;
     margin-bottom: 30px;
   }
 }
@@ -57,7 +57,7 @@
     padding: 52px;
     padding-top: 40px;
     grid-template-columns: 162px 1fr;
-    grid-template-rows: 146px 72px 64px;
+    grid-template-rows: 146px 1fr 64px;
     margin: 0;
   }
 }
@@ -174,6 +174,7 @@
   grid-column-end: -1;
   margin: 0;
   border-bottom: 1px solid @light-grey;
+  padding-bottom: 23px;
 }
 
 @media (min-width: @tablet-width) {
@@ -201,6 +202,7 @@
     grid-row-start: 2;
     grid-row-end: 3;
     border-bottom: none;
+    padding-bottom: 1px;
   }
 
   .programs__description--weight {

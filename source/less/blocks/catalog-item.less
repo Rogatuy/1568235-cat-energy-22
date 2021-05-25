@@ -28,7 +28,7 @@
 .catalog-item__wrapper {
   display: grid;
   grid-template-columns: 140px 140px;
-  grid-template-rows: 75px 70px 40px;
+  grid-template-rows: 1fr 70px 40px;
   margin: 0 auto 23px auto;
   padding: 0;
   width: 280px;
@@ -37,7 +37,7 @@
 @media (min-width: @tablet-width) {
   .catalog-item__wrapper {
     grid-template-columns: 324px;
-    grid-template-rows: 163px 50px 140px 39px;
+    grid-template-rows: 163px 1fr 140px 39px;
     margin-bottom: 23px;
     width: 324px;
   }
@@ -46,7 +46,7 @@
 @media (min-width: @desktop-width) {
   .catalog-item__wrapper {
     grid-template-columns: 245px;
-    grid-template-rows: 161px 50px 140px 39px;//поправить!
+    grid-template-rows: 161px 1fr 140px 39px;//поправить!
     margin-bottom: 23px;
     width: 245px;
   }
@@ -111,18 +111,21 @@
   line-height: 20px;
   color: @dark-grey-2;
   margin: 0;
+  padding-bottom: 15px;
 }
 
 @media (min-width: @tablet-width) {
   .catalog-item__heading {
     font-size: 20px;
     line-height: 24px;
+    padding-bottom: 3px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .catalog-item__heading {
     line-height: 21px;
+    padding-bottom: 8px;
   }
 }
 

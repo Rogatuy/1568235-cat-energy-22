@@ -122,8 +122,6 @@ const clean = () => {
   return del("build");
 };
 
-};
-
 exports.html = html;
 
 // Server

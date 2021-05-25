@@ -89,6 +89,10 @@
   min-width: 172px;
 }
 
+.data__text:hover {
+  border: 1px solid @dark-grey-3;
+}
+
 .data__text:focus {
   border: 2px solid @dark-grey;
   padding-left: 14px;
@@ -106,10 +110,14 @@
     padding-left: 19px;
     flex-grow: 1;
   }
+
+  .data__text:hover {
+    padding-left: 19px;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .data__text:focus {
-    padding-left: 20px;
+    padding-left: 18px;
   }
 }

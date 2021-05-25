@@ -11,7 +11,7 @@
   .example {
     background-color: @white;
     padding: 0;
-    height: 1040px;
+    min-height: 1040px;
     background-image: url("../../img/bcg_rectangle.svg");
     background-position-y: 288px;
     background-size: 765px 100%;
@@ -21,11 +21,10 @@
 @media (min-width: @desktop-width) {
   .example {
     padding: 0;
-    min-height: 205px;
-    height: 600px;
+    min-height: 600px;
     background-image: url("../../img/bcg_rectangle_desktop.svg");
     background-position-y: 70px;
-    background-size: 1450px 100%; //мне вообще не нравится эта муть)))и я не знаю, как так получилось)но это работает!))
+    background-size: 1450px 100%;
     background-repeat: repeat-x;
   }
 }
