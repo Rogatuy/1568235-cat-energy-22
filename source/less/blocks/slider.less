@@ -1,51 +1,55 @@
-.form-index {
+.slider {
   width: 228px;
   font-family: "OswaldRegular", "Arial", sans-serif;
   font-style: normal;
   font-size: 16px;
   line-height: 20px;
-  margin: 30px auto 0 auto;
+  margin: 28px auto 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 2px;
 }
 
 @media (min-width: @tablet-width) {
-  .form-index {
+  .slider {
     font-size: 20px;
     line-height: 30px;
     position: absolute;
     bottom: 72px;
-    width: 603px;
+    width: 593px;
     left: 80px;
+    padding-left: 6px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .form-index {
+  .slider {
     bottom: 61px;
     left: 100px;
   }
 }
 
-.form-index::after {
+.slider::after {
   content: url("../../img/slider.svg");
   position: absolute;
   left: 119px;
-  bottom: 0;
+  bottom: 6px;
 }
 
-.form-index__button {
+.slider__button {
   display: none;
 }
 
 @media (min-width: @tablet-width) {
-  .form-index::after {
+  .slider::after {
     content: url("../../img/slider-tablet-1.svg");
     position: absolute;
     left: 88px;
-    top: -6px;
+    bottom: 5px;
     z-index: 1;
   }
 
-  .form-index__button {
+  .slider__button {
     display: block;
     background-color: transparent;
     border: none;
@@ -59,7 +63,7 @@
     cursor: pointer;
   }
 
-  .form-index__button:active {
+  .slider__button:active {
     background-image: url("../../img/slider-tablet-circle-active.svg");
     background-repeat: no-repeat;
     padding: 0;
@@ -70,33 +74,45 @@
   }
 }
 
-.form-index__list {
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  margin: 0;
-  padding: 0;
-  padding-left: 2px;
+@media (min-width: @tablet-width) {
+  .slider::after {
+    bottom: 4px;
+  }
 }
 
-.form-index__input {
-  position: absolute;
-  z-index: -1;
-  opacity: 0;
-  margin: 0;
-}
-
-.form-index__label {
+.slider__button-after,
+.slider__button-before {
   cursor: pointer;
-  margin: 0 14px;
-  width: 70px;
+  margin: 0 8px;
+  padding: 0;
+  width: 54px;
+  height: 30px;
+  border: none;
   border-bottom: 1px dashed @basic-black-opacity-3;
+  font-family: "OswaldRegular", "Arial", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 10px;
+  font-weight: normal;
+  text-transform: uppercase;
+  background-color: transparent;
 }
 
-.form-index__label:hover {
+@media (min-width: @tablet-width) {
+  .slider__button-after,
+  .slider__button-before {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+
+.slider__button-after:hover,
+.slider__button-before:hover {
   border-bottom: 1px solid @basic-black-opacity-2;
 }
 
-.form-index__label:active {
+.slider__button-after:active,
+.slider__button-before:active {
   border-bottom: none;
 }

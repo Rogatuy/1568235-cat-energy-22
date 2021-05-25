@@ -45,7 +45,7 @@
   line-height: 40px;
   font-weight: normal;
   text-transform: none;
-  padding-top: 6px;
+  padding-top: 2px;
   padding-bottom: 41px;
   padding-left: 0;
   margin: 0;
@@ -56,6 +56,7 @@
     font-size: 60px;
     line-height: 60px;
     margin-top: 35px;
+    padding-top: 6px;
     padding-bottom: 12px;
   }
 }
@@ -178,6 +179,7 @@
     background-image: url("../../img/working__item-bcg-3.svg");
     background-position-x: 125px;
     background-repeat: no-repeat;
+    padding-bottom: 90px;
   }
 }
 
@@ -201,6 +203,7 @@
     background-image: url("../../img/working__item-bcg-4.svg");
     background-position-x: 125px;
     background-repeat: no-repeat;
+    padding-bottom: 90px;
   }
 }
 
@@ -208,5 +211,12 @@
   .working__item--term::before {
     content: url("../../img/term-big.svg");
     top: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .working__item--term,
+  .working__item--replacement {
+    padding-bottom: 104px;
   }
 }

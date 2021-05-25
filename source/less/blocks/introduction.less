@@ -26,10 +26,14 @@
     width: 50%;
     z-index: -2;
     height: 694px;
-    background-image: linear-gradient(to right, @basic-green-opacity, @basic-green-opacity), url("../../img/index-can-desktop\ 1\ bg.jpg");
+    background-image: linear-gradient(to right, @basic-green-opacity, @basic-green-opacity), url("../../img/index-can-desktop-1-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-color: @basic-green-opacity;
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient(to right, @basic-green-opacity, @basic-green-opacity), url("../../img/index-can-desktop-1-bg@2x.jpg");
   }
 }
 

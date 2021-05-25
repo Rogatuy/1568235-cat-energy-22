@@ -9,12 +9,10 @@
 
 @media (min-width: @tablet-width) {
   .example {
-    background-color: @white;
     padding: 0;
     min-height: 1040px;
-    background-image: url("../../img/bcg_rectangle.svg");
-    background-position-y: 288px;
-    background-size: 765px 100%;
+    background: linear-gradient(to bottom, @white 55%, @basic-grey-2 45%);
+    margin-top: 45px;
   }
 }
 
@@ -22,10 +20,8 @@
   .example {
     padding: 0;
     min-height: 600px;
-    background-image: url("../../img/bcg_rectangle_desktop.svg");
-    background-position-y: 70px;
-    background-size: 1450px 100%;
-    background-repeat: repeat-x;
+    background: linear-gradient(to bottom, @white 22%, transparent 22%, transparent 15%, @basic-grey 15%);
+    margin-top: 0;
   }
 }
 
